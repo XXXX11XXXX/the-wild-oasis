@@ -82,28 +82,28 @@
 
 5.  在浏览器中打开 Vite 提供的本地开发地址 (通常是 `http://localhost:5173`)。
 
-### 📁 Project Structure
+### 📁 项目结构 (Project Structure)
 
-The project follows this general directory structure:
+本项目遵循以下目录结构：
 
 ```plaintext
 .
 ├── src/
-│   ├── features/           # Business modules (e.g., authentication, bookings, cabins)
+│   ├── features/           # 各个业务模块 (例如：认证、预订、客舱、入住/退房、仪表盘、设置)
 │   │   ├── authentication/
 │   │   ├── bookings/
 │   │   ├── cabins/
 │   │   ├── check-in-out/
 │   │   ├── dashboard/
 │   │   └── settings/
-│   ├── services/           # API request functions (wrapping Supabase client, etc.)
-│   ├── ui/                 # General reusable UI components (Button, Modal, Input, etc.)
-│   ├── hooks/              # General reusable custom Hooks (e.g., useOutsideClick)
-│   ├── utils/              # Utility functions, constants (helpers.js, constants.js)
-│   ├── context/            # Context API implementations (if used, e.g., DarkModeContext)
-│   ├── styles/             # Global styles (GlobalStyles.js) or theme config
-│   ├── pages/              # Page-level components, composing features/ui components
-│   ├── App.jsx             # Main application component (routing, global layout)
-│   └── main.jsx            # Application entry point (initialization)
-├── .env.example            # Example environment variables (Recommended)
-└── .env                    # Local environment variables (Do not commit to Git)
+│   ├── services/           # API 请求函数 (封装 Supabase 客户端调用等)
+│   ├── ui/                 # 通用的可复用 UI 组件 (按钮、模态框、输入框等)
+│   ├── hooks/              # 通用的自定义 Hook (例如：useOutsideClick)
+│   ├── utils/              # 工具函数、常量 (例如：helpers.js, constants.js)
+│   ├── context/            # Context API 实现 (如果使用，例如：DarkModeContext)
+│   ├── styles/             # 全局样式 (例如：GlobalStyles.js) 或主题配置
+│   ├── pages/              # 页面级组件，组合 features 和 ui 下的组件
+│   ├── App.jsx             # 应用主组件 (包含路由配置、全局布局)
+│   └── main.jsx            # 应用入口文件 (初始化)
+├── .env.example            # 环境变量示例文件 (推荐添加)
+└── .env                    # 本地环境变量 (不应提交到 Git)
