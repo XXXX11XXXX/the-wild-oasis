@@ -82,23 +82,28 @@
 
 5.  在浏览器中打开 Vite 提供的本地开发地址 (通常是 `http://localhost:5173`)。
 
-## 📂 目录结构 (简化)
-src/
-├── features/ # 各个业务模块 (e.g., authentication, bookings, cabins, dashboard, check-in-out, settings)
-│ ├── authentication/
-│ ├── bookings/
-│ ├── cabins/
-│ ├── check-in-out/
-│ ├── dashboard/
-│ └── settings/
-├── services/ # API 请求函数 (封装 Supabase 客户端调用, e.g., apiAuth.js, apiBookings.js, supabase.js)
-├── ui/ # 通用的 UI 组件 (e.g., Button, Modal, Input, Spinner, Table, Row)
-├── hooks/ # 通用的自定义 Hook (e.g., useOutsideClick)
-├── utils/ # 工具函数、常量 (e.g., helpers.js, constants.js)
-├── context/ # (如果使用了 Context API, e.g., DarkModeContext)
-├── styles/ # 全局样式 (GlobalStyles.js) 或主题配置
-├── pages/ # 页面级组件，通常组合 features 下的组件
-├── App.jsx # 应用主组件，包含路由配置和全局布局
-└── main.jsx # 应用入口文件，初始化 React Query, Router 等
-.env.example # 环境变量示例文件 (推荐添加)
-.env # 存储环境变量 (本地配置，不应提交到 Git)
+### 📁 Project Structure
+
+The project follows this general directory structure:
+
+```plaintext
+.
+├── src/
+│   ├── features/           # Business modules (e.g., authentication, bookings, cabins)
+│   │   ├── authentication/
+│   │   ├── bookings/
+│   │   ├── cabins/
+│   │   ├── check-in-out/
+│   │   ├── dashboard/
+│   │   └── settings/
+│   ├── services/           # API request functions (wrapping Supabase client, etc.)
+│   ├── ui/                 # General reusable UI components (Button, Modal, Input, etc.)
+│   ├── hooks/              # General reusable custom Hooks (e.g., useOutsideClick)
+│   ├── utils/              # Utility functions, constants (helpers.js, constants.js)
+│   ├── context/            # Context API implementations (if used, e.g., DarkModeContext)
+│   ├── styles/             # Global styles (GlobalStyles.js) or theme config
+│   ├── pages/              # Page-level components, composing features/ui components
+│   ├── App.jsx             # Main application component (routing, global layout)
+│   └── main.jsx            # Application entry point (initialization)
+├── .env.example            # Example environment variables (Recommended)
+└── .env                    # Local environment variables (Do not commit to Git)
